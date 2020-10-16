@@ -9,7 +9,7 @@ function App() {
     const loadCourses = async () => {
         // Load the courses
         try {
-            const response = await fetch('/api/courses');
+            const response = await fetch('/.netlify/functions/courses');
             const courses = await response.json();
             setCourses(courses);
         } catch(error) {
